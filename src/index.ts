@@ -41,7 +41,7 @@ export default {
             "Content-Type": "application/json",
             Accept: "application/json",
             Authorization: `Token ${env.DELIVERY_TOKEN}`,
-            "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
+            "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, OPTIONS",
             "Access-Control-Allow-Headers": "Content-Type",
           },
