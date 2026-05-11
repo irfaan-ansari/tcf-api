@@ -16,6 +16,8 @@ interface ErrorResponse {
   data: string;
 }
 
+const ALLOWED_ORIGIN = "https://theclothingfactory.in/";
+
 const ORIGIN_PINCODE = "201301";
 const MODE_OF_TRANSPORT = "E";
 const BASE_URL = "https://track.delhivery.com/api/dc/expected_tat";
@@ -39,6 +41,9 @@ export default {
             "Content-Type": "application/json",
             Accept: "application/json",
             Authorization: `Token ${env.DELIVERY_TOKEN}`,
+            "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
+            "Access-Control-Allow-Methods": "GET, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
           },
         },
       );
