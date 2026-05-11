@@ -25,6 +25,8 @@ const BASE_URL = "https://track.delhivery.com/api/dc/expected_tat";
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     try {
+      const origin = request.headers.get("origin");
+      console.log(origin);
       const { searchParams } = new URL(request.url);
       const destinationPincode = searchParams.get("pincode");
 
